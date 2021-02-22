@@ -1,0 +1,583 @@
+Overhead ╎ [+additional indent] Count File:Line; Function
+=========================================================
+   ╎1490 @Base\task.jl:356; (::VSCodeServer.var"#58#59")()
+   ╎ 1490 @VSCodeServer\src\eval.jl:34; macro expansion
+   ╎  1490 @Base\essentials.jl:709; invokelatest(::Any)
+   ╎   1490 @Base\essentials.jl:710; #invokelatest#1
+   ╎    1490 @VSCodeServer\src\eval.jl:182; (::VSCodeServer.var"#60#64"{VSCodeServer.ReplRunCodeRequestParams})()
+   ╎     1490 @Base\logging.jl:514; with_logger
+   ╎    ╎ 1490 @Base\logging.jl:408; with_logstate(::Function, ::Any)
+   ╎    ╎  1490 @VSCodeServer\src\eval.jl:116; (::VSCodeServer.var"#61#65"{String,Int64,Int64,String,Module,Bool,Bool,VSCodeServer.ReplRunCodeRequestParams})()
+   ╎    ╎   1490 @VSCodeServer\src\repl.jl:36; hideprompt(::VSCodeServer.var"#62#66"{String,Int64,Int64,String,Module,Bool,Bool,VSCodeServer.ReplRunCodeRequestParams})
+   ╎    ╎    1490 @VSCodeServer\src\eval.jl:148; (::VSCodeServer.var"#62#66"{String,Int64,Int64,String,Module,Bool,Bool,VSCodeServer.ReplRunCodeRequestParams})()
+   ╎    ╎     1490 @VSCodeServer\src\repl.jl:135; withpath(::VSCodeServer.var"#63#67"{String,Int64,Int64,String,Module,Bool,VSCodeServer.ReplRunCodeRequestParams}, ::String)
+   ╎    ╎    ╎ 1490 @VSCodeServer\src\eval.jl:150; (::VSCodeServer.var"#63#67"{String,Int64,Int64,String,Module,Bool,VSCodeServer.ReplRunCodeRequestParams})()
+   ╎    ╎    ╎  1490 @VSCodeServer\src\eval.jl:190; inlineeval##kw
+   ╎    ╎    ╎   1490 @VSCodeServer\src\eval.jl:192; inlineeval(::Module, ::String, ::Int64, ::Int64, ::String; softscope::Bool)
+   ╎    ╎    ╎    1490 @Base\essentials.jl:709; invokelatest(::Any, ::Any, ::Vararg{Any,N} where N)
+   ╎    ╎    ╎     1490 @Base\essentials.jl:710; invokelatest(::Any, ::Any, ::Vararg{Any,N} where N; kwargs::Base.Iterators.Pairs{Union{},Union{},Tuple{},NamedTuple{(),Tuple{}}})
+   ╎    ╎    ╎    ╎ 1490 @Base\loading.jl:1091; include_string(::Function, ::Module, ::String, ::String)
+   ╎    ╎    ╎    ╎  148  c:\Users\ahmad\OneDrive\Documents\GitHub\open-ended-neural-nets\DFA_BP\explorative\script.jl:138; propagate!(::Network, ::Array{Float16,2}, ::Int64, ::Float64, ::Int64)
+   ╎    ╎    ╎    ╎   148  @StructArrays\src\utils.jl:164; replace_storage(::Type{T} where T, ::StructArray{Synapse,2,NamedTuple{(:w, :δw, :α),Tuple{Array{Float32,2},Array{Float32,2},BitArray{2}}},Int64})
+   ╎    ╎    ╎    ╎    148  @Base\namedtuple.jl:187; map(::Function, ::NamedTuple{(:w, :δw, :α),Tuple{Array{Float32,2},Array{Float32,2},BitArray{2}}})
+   ╎    ╎    ╎    ╎     148  @Base\tuple.jl:159; map(::StructArrays.var"#63#64"{UnionAll}, ::Tuple{Array{Float32,2},Array{Float32,2},BitArray{2}})
+   ╎    ╎    ╎    ╎    ╎ 148  @StructArrays\src\utils.jl:164; #63
+   ╎    ╎    ╎    ╎    ╎  148  @StructArrays\src\utils.jl:131; replace_storage(::Type{T} where T, ::Array{Float32,2})
+   ╎    ╎    ╎    ╎    ╎   148  @CUDA\src\array.jl:198; CuArray(::Array{Float32,2})
+   ╎    ╎    ╎    ╎    ╎    148  @CUDA\src\array.jl:191; CuArray
+   ╎    ╎    ╎    ╎    ╎     4    @Base\array.jl:554; convert
+   ╎    ╎    ╎    ╎    ╎    ╎ 4    @Base\boot.jl:431; Array
+   ╎    ╎    ╎    ╎    ╎    ╎  4    @Base\bitarray.jl:496; Array{Bool,2}(::BitArray{2})
+  2╎    ╎    ╎    ╎    ╎    ╎   2    @Base\array.jl:847; setindex!
+   ╎    ╎    ╎    ╎    ╎    ╎   1    @Base\bitarray.jl:661; unsafe_bitgetindex
+   ╎    ╎    ╎    ╎    ╎    ╎    1    @Base\int.jl:463; <<
+  1╎    ╎    ╎    ╎    ╎    ╎     1    @Base\int.jl:456; <<
+   ╎    ╎    ╎    ╎    ╎    ╎   1    @Base\bitarray.jl:662; unsafe_bitgetindex
+   ╎    ╎    ╎    ╎    ╎    ╎    1    @Base\operators.jl:202; !=
+   ╎    ╎    ╎    ╎    ╎    ╎     1    @Base\int.jl:445; ==
+  1╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @Base\promotion.jl:398; ==
+   ╎    ╎    ╎    ╎    ╎     144  @CUDA\src\array.jl:258; copyto!
+   ╎    ╎    ╎    ╎    ╎    ╎ 144  @CUDA\src\array.jl:254; copyto!(::CuArray{Float32,2}, ::Int64, ::Array{Float32,2}, ::Int64, ::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎  144  @CUDA\src\array.jl:290; unsafe_copyto!
+   ╎    ╎    ╎    ╎    ╎    ╎   144  @CUDA\lib\cudadrv\memory.jl:388; unsafe_copyto!
+   ╎    ╎    ╎    ╎    ╎    ╎    144  @CUDA\lib\cudadrv\memory.jl:395; #unsafe_copyto!#7
+   ╎    ╎    ╎    ╎    ╎    ╎     144  @CUDA\lib\utils\call.jl:93; cuMemcpyHtoD_v2(::CuPtr{Float32}, ::Ptr{Float32}, ::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎ 144  @CUDA\lib\cudadrv\error.jl:102; macro expansion
+143╎    ╎    ╎    ╎    ╎    ╎    ╎  144  @CUDA\lib\cudadrv\libcuda.jl:499; macro expansion
+   ╎    ╎    ╎    ╎  1    c:\Users\ahmad\OneDrive\Documents\GitHub\open-ended-neural-nets\DFA_BP\explorative\script.jl:139; propagate!(::Network, ::Array{Float16,2}, ::Int64, ::Float64, ::Int64)
+   ╎    ╎    ╎    ╎   1    @StructArrays\src\utils.jl:164; replace_storage(::Type{T} where T, ::StructArray{Neuron,1,NamedTuple{(:accumulator, :cycle_timer, :b, :δb),Tuple{Array{Int64,1},Array{Int64,1},Array{Float32,1},Array{Float32,1}}},Int64})
+   ╎    ╎    ╎    ╎    1    @Base\namedtuple.jl:187; map(::Function, ::NamedTuple{(:accumulator, :cycle_timer, :b, :δb),Tuple{Array{Int64,1},Array{Int64,1},Array{Float32,1},Array{Float32,1}}})
+   ╎    ╎    ╎    ╎     1    @Base\tuple.jl:160; map
+   ╎    ╎    ╎    ╎    ╎ 1    @StructArrays\src\utils.jl:164; (::StructArrays.var"#63#64"{UnionAll})(::Array{Int64,1})
+   ╎    ╎    ╎    ╎    ╎  1    @StructArrays\src\utils.jl:131; replace_storage(::Type{T} where T, ::Array{Int64,1})
+   ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\array.jl:197; CuArray{T,1} where T(::Array{Int64,1})
+   ╎    ╎    ╎    ╎    ╎    1    @CUDA\src\array.jl:191; CuArray
+   ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\array.jl:258; copyto!
+   ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\array.jl:254; copyto!(::CuArray{Int64,1}, ::Int64, ::Array{Int64,1}, ::Int64, ::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\src\array.jl:290; unsafe_copyto!
+   ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\lib\cudadrv\memory.jl:388; unsafe_copyto!
+   ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\cudadrv\memory.jl:395; #unsafe_copyto!#7
+   ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\utils\call.jl:93; cuMemcpyHtoD_v2(::CuPtr{Int64}, ::Ptr{Int64}, ::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\lib\cudadrv\error.jl:102; macro expansion
+  1╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\lib\cudadrv\libcuda.jl:499; macro expansion
+   ╎    ╎    ╎    ╎  1    c:\Users\ahmad\OneDrive\Documents\GitHub\open-ended-neural-nets\DFA_BP\explorative\script.jl:151; propagate!(::Network, ::Array{Float16,2}, ::Int64, ::Float64, ::Int64)
+   ╎    ╎    ╎    ╎   1    @ProgressBars\src\ProgressBars.jl:170; iterate(::ProgressBar)
+   ╎    ╎    ╎    ╎    1    @ProgressBars\src\ProgressBars.jl:131; display_progress(::ProgressBar)
+   ╎    ╎    ╎    ╎     1    @Base\strings\io.jl:174; string
+  1╎    ╎    ╎    ╎    ╎ 1    @Base\strings\io.jl:135; print_to_string(::Int64, ::Vararg{Any,N} where N)
+   ╎    ╎    ╎    ╎  299  c:\Users\ahmad\OneDrive\Documents\GitHub\open-ended-neural-nets\DFA_BP\explorative\script.jl:156; propagate!(::Network, ::Array{Float16,2}, ::Int64, ::Float64, ::Int64)
+   ╎    ╎    ╎    ╎   299  @Base\reduce.jl:512; sum
+   ╎    ╎    ╎    ╎    299  @Base\reducedim.jl:389; count
+   ╎    ╎    ╎    ╎     299  @Base\reducedim.jl:389; #count#623
+   ╎    ╎    ╎    ╎    ╎ 299  @GPUArrays\src\host\mapreduce.jl:77; count##kw
+   ╎    ╎    ╎    ╎    ╎  299  @GPUArrays\src\host\mapreduce.jl:77; #count#22
+   ╎    ╎    ╎    ╎    ╎   299  @GPUArrays\src\host\mapreduce.jl:28; mapreduce##kw
+   ╎    ╎    ╎    ╎    ╎    299  @GPUArrays\src\host\mapreduce.jl:28; #mapreduce#15
+   ╎    ╎    ╎    ╎    ╎     299  @GPUArrays\src\host\mapreduce.jl:34; _mapreduce##kw
+   ╎    ╎    ╎    ╎    ╎    ╎ 3    @GPUArrays\src\host\mapreduce.jl:62; _mapreduce(::typeof(identity), ::typeof(Base.add_sum), ::CuArray{Bool,1}; dims::Colon, init::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎  3    @CUDA\src\mapreduce.jl:143; mapreducedim!##kw
+   ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\mapreduce.jl:233; mapreducedim!(::typeof(identity), ::typeof(Base.add_sum), ::CuArray{Int64,1}, ::Base.Broadcast.Broadcasted{CUDA.CuArrayStyle{1},Tuple{Base.OneTo{Int64}},typeof(identity),Tuple{CuArray{Bool,1}}}; init::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\src\compiler\execution.jl:102; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\compiler\execution.jl:345; Any##kw
+  1╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\compiler\execution.jl:345; (::CUDA.HostKernel{CUDA.partial_mapreduce_grid,Tuple{typeof(identity),typeof(Base.add_sum),Int64,CartesianIndices{1,Tuple{Base.OneTo{Int64}}},CartesianIndices{1,Tuple{Base.OneTo{Int64}}},Val{true},CuDeviceArray{Int64,2,1},Base.Broadcast.Broadcasted{CUDA.CuArrayStyl...
+   ╎    ╎    ╎    ╎    ╎    ╎   2    @CUDA\src\mapreduce.jl:236; mapreducedim!(::typeof(identity), ::typeof(Base.add_sum), ::CuArray{Int64,1}, ::Base.Broadcast.Broadcasted{CUDA.CuArrayStyle{1},Tuple{Base.OneTo{Int64}},typeof(identity),Tuple{CuArray{Bool,1}}}; init::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎    2    @CUDA\src\mapreduce.jl:143; mapreducedim!##kw
+   ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\mapreduce.jl:171; mapreducedim!(::typeof(identity), ::typeof(Base.add_sum), ::CuArray{Int64,2}, ::CuArray{Int64,2}; init::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\array.jl:452; reshape(::CuArray{Int64,2}, ::Tuple{Int64,Int64,Int64})
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\src\array.jl:27; Type##kw
+  1╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\array.jl:29; _#846
+   ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\mapreduce.jl:219; mapreducedim!(::typeof(identity), ::typeof(Base.add_sum), ::CuArray{Int64,2}, ::CuArray{Int64,2}; init::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\compiler\execution.jl:102; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\src\compiler\execution.jl:345; Any##kw
+  1╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\compiler\execution.jl:345; (::CUDA.HostKernel{CUDA.partial_mapreduce_grid,Tuple{typeof(identity),typeof(Base.add_sum),Int64,CartesianIndices{2,Tuple{Base.OneTo{Int64},Base.OneTo{Int64}}},CartesianIndices{2,Tuple{Base.OneTo{Int64},Base.OneTo{Int64}}},Val{true},CuDeviceArray{Int64,3,1},CuDevi...
+   ╎    ╎    ╎    ╎    ╎    ╎ 296  @GPUArrays\src\host\mapreduce.jl:65; _mapreduce(::typeof(identity), ::typeof(Base.add_sum), ::CuArray{Bool,1}; dims::Colon, init::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎  296  @GPUArrays\src\host\indexing.jl:64; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎   296  @GPUArrays\src\host\indexing.jl:99; getindex
+   ╎    ╎    ╎    ╎    ╎    ╎    296  @CUDA\src\array.jl:268; copyto!(::Array{Int64,1}, ::Int64, ::CuArray{Int64,1}, ::Int64, ::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎     296  @CUDA\src\array.jl:299; unsafe_copyto!
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎ 296  @CUDA\lib\cudadrv\memory.jl:388; unsafe_copyto!
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎  296  @CUDA\lib\cudadrv\memory.jl:395; #unsafe_copyto!#6
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎   296  @CUDA\lib\utils\call.jl:93; cuMemcpyDtoH_v2(::Ptr{Int64}, ::CuPtr{Int64}, ::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    296  @CUDA\lib\cudadrv\error.jl:102; macro expansion
+296╎    ╎    ╎    ╎    ╎    ╎    ╎     296  @CUDA\lib\cudadrv\libcuda.jl:506; macro expansion
+   ╎    ╎    ╎    ╎  1    c:\Users\ahmad\OneDrive\Documents\GitHub\open-ended-neural-nets\DFA_BP\explorative\script.jl:160; propagate!(::Network, ::Array{Float16,2}, ::Int64, ::Float64, ::Int64)
+   ╎    ╎    ╎    ╎   1    @CUDA\src\indexing.jl:15; getindex(::CuArray{Float16,1}, ::CuArray{Bool,1})
+   ╎    ╎    ╎    ╎    1    @Base\accumulate.jl:150; cumsum
+   ╎    ╎    ╎    ╎     1    @Base\accumulate.jl:112; cumsum##kw
+   ╎    ╎    ╎    ╎    ╎ 1    @Base\accumulate.jl:113; #cumsum#659
+   ╎    ╎    ╎    ╎    ╎  1    @Base\accumulate.jl:51; cumsum!##kw
+   ╎    ╎    ╎    ╎    ╎   1    @Base\accumulate.jl:51; #cumsum!#658
+   ╎    ╎    ╎    ╎    ╎    1    @Base\accumulate.jl:61; _cumsum!
+   ╎    ╎    ╎    ╎    ╎     1    @Base\accumulate.jl:357; accumulate!
+   ╎    ╎    ╎    ╎    ╎    ╎ 1    @Base\accumulate.jl:359; #accumulate!#666
+   ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\src\accumulate.jl:196; _accumulate!
+   ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\accumulate.jl:131; scan!##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\src\accumulate.jl:170; scan!(::Function, ::CuArray{Int64,1}, ::CuArray{Bool,1}; dims::Int64, init::Nothing, neutral::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\compiler\execution.jl:102; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\compiler\execution.jl:345; (::Core.var"#Any##kw")(::NamedTuple{(:threads, :blocks, :shmem),Tuple{Int64,Tuple{Int64,Int64,Int64},Int64}}, ::CUDA.HostKernel{CUDA.partial_scan,Tuple{typeof(Base.add_sum),CuDeviceArray{Int64,1,1},CuDeviceArray{Bool,1,1},CartesianIndices{1,Tuple{Base.OneTo{Int64}}...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\src\compiler\execution.jl:345; (::CUDA.HostKernel{CUDA.partial_scan,Tuple{typeof(Base.add_sum),CuDeviceArray{Int64,1,1},CuDeviceArray{Bool,1,1},CartesianIndices{1,Tuple{Base.OneTo{Int64}}},CartesianIndices{0,Tuple{}},CartesianIndices{0,Tuple{}},CartesianIndices{2,Tuple{Base.OneTo{Int64},Base.On...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\compiler\execution.jl:162; (::CUDA.var"#call##kw")(::NamedTuple{(:threads, :blocks, :shmem),Tuple{Int64,Tuple{Int64,Int64,Int64},Int64}}, ::typeof(CUDA.call), ::CUDA.HostKernel{CUDA.partial_scan,Tuple{typeof(Base.add_sum),CuDeviceArray{Int64,1,1},CuDeviceArray{Bool,1,1},CartesianIndices{1,T...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\src\compiler\execution.jl:162; call(::CUDA.HostKernel{CUDA.partial_scan,Tuple{typeof(Base.add_sum),CuDeviceArray{Int64,1,1},CuDeviceArray{Bool,1,1},CartesianIndices{1,Tuple{Base.OneTo{Int64}}},CartesianIndices{0,Tuple{}},CartesianIndices{0,Tuple{}},CartesianIndices{2,Tuple{Base.OneTo{Int64},Ba...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\compiler\execution.jl:191; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\compiler\execution.jl:207; cudacall##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\src\compiler\execution.jl:211; #cudacall#795
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\lib\cudadrv\execution.jl:137; cudacall##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\cudadrv\execution.jl:137; #cudacall#598
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\cudadrv\execution.jl:79; convert_arguments
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\lib\cudadrv\execution.jl:97; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\lib\cudadrv\execution.jl:138; #599
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\lib\cudadrv\execution.jl:55; launch##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\cudadrv\execution.jl:62; launch(::CuFunction, ::CuDeviceArray{Int64,1,1}, ::CuDeviceArray{Bool,1,1}, ::CartesianIndices{1,Tuple{Base.OneTo{Int64}}}, ::CartesianIndices{2,Tuple{Base.OneTo{Int64},Base.OneTo{Int64}}}, ::Int64; blocks::Tuple{Int64,Int64,Int64}, threads::Int64, cooperati...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\cudadrv\execution.jl:9; pack_arguments
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\lib\cudadrv\execution.jl:33; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\lib\cudadrv\execution.jl:69; #594
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\lib\utils\call.jl:93; cuLaunchKernel(::CuFunction, ::UInt32, ::UInt32, ::UInt32, ::UInt32, ::UInt32, ::UInt32, ::Int64, ::CuStream, ::Array{Ptr{Nothing},1}, ::Ptr{Nothing})
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\cudadrv\error.jl:102; macro expansion
+  1╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\cudadrv\libcuda.jl:1234; macro expansion
+   ╎    ╎    ╎    ╎  2    c:\Users\ahmad\OneDrive\Documents\GitHub\open-ended-neural-nets\DFA_BP\explorative\script.jl:161; propagate!(::Network, ::Array{Float16,2}, ::Int64, ::Float64, ::Int64)
+   ╎    ╎    ╎    ╎   2    @CUDA\src\indexing.jl:81; findall
+   ╎    ╎    ╎    ╎    2    @CUDA\src\indexing.jl:49; findall(::CuArray{Bool,1})
+   ╎    ╎    ╎    ╎     2    @Base\accumulate.jl:150; cumsum
+   ╎    ╎    ╎    ╎    ╎ 2    @Base\accumulate.jl:112; cumsum##kw
+   ╎    ╎    ╎    ╎    ╎  2    @Base\accumulate.jl:113; #cumsum#659
+   ╎    ╎    ╎    ╎    ╎   2    @Base\accumulate.jl:51; cumsum!##kw
+   ╎    ╎    ╎    ╎    ╎    2    @Base\accumulate.jl:51; #cumsum!#658
+   ╎    ╎    ╎    ╎    ╎     2    @Base\accumulate.jl:61; _cumsum!
+   ╎    ╎    ╎    ╎    ╎    ╎ 2    @Base\accumulate.jl:357; accumulate!
+   ╎    ╎    ╎    ╎    ╎    ╎  2    @Base\accumulate.jl:359; #accumulate!#666
+   ╎    ╎    ╎    ╎    ╎    ╎   2    @CUDA\src\accumulate.jl:196; _accumulate!
+   ╎    ╎    ╎    ╎    ╎    ╎    2    @CUDA\src\accumulate.jl:131; scan!##kw
+   ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\accumulate.jl:174; scan!(::Function, ::CuArray{Int64,1}, ::CuArray{Bool,1}; dims::Int64, init::Nothing, neutral::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\array.jl:353; fill
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\src\array.jl:77; CuArray
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\array.jl:76; CuArray
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\src\array.jl:20; CuArray{Int64,1}(::UndefInitializer, ::Tuple{Int64})
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\pool.jl:309; alloc
+  1╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @Base\error.jl:112; backtrace()
+   ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\accumulate.jl:178; scan!(::Function, ::CuArray{Int64,1}, ::CuArray{Bool,1}; dims::Int64, init::Nothing, neutral::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @Base\accumulate.jl:357; (::Base.var"#accumulate!##kw")(::NamedTuple{(:dims,),Tuple{Int64}}, ::typeof(accumulate!), ::Function, ::CuArray{Int64,1}, ::CuArray{Int64,1})
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @Base\accumulate.jl:359; #accumulate!#666
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\accumulate.jl:199; _accumulate!
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\src\accumulate.jl:131; (::CUDA.var"#scan!##kw")(::NamedTuple{(:dims,),Tuple{Int64}}, ::typeof(CUDA.scan!), ::Function, ::CuArray{Int64,1}, ::CuArray{Int64,1})
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\accumulate.jl:164; scan!(::Function, ::CuArray{Int64,1}, ::CuArray{Int64,1}; dims::Int64, init::Nothing, neutral::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\compiler\execution.jl:102; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\src\compiler\execution.jl:345; (::Core.var"#Any##kw")(::NamedTuple{(:threads, :blocks, :shmem),Tuple{Int64,Tuple{Int64,Int64,Int64},Int64}}, ::CUDA.HostKernel{CUDA.partial_scan,Tuple{typeof(Base.add_sum),CuDeviceArray{Int64,1,1},CuDeviceArray{Int64,1,1},CartesianIndices{1,Tuple{Base.OneTo{In...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\compiler\execution.jl:345; (::CUDA.HostKernel{CUDA.partial_scan,Tuple{typeof(Base.add_sum),CuDeviceArray{Int64,1,1},CuDeviceArray{Int64,1,1},CartesianIndices{1,Tuple{Base.OneTo{Int64}}},CartesianIndices{0,Tuple{}},CartesianIndices{0,Tuple{}},CartesianIndices{2,Tuple{Base.OneTo{Int64},Bas...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\src\compiler\execution.jl:162; (::CUDA.var"#call##kw")(::NamedTuple{(:threads, :blocks, :shmem),Tuple{Int64,Tuple{Int64,Int64,Int64},Int64}}, ::typeof(CUDA.call), ::CUDA.HostKernel{CUDA.partial_scan,Tuple{typeof(Base.add_sum),CuDeviceArray{Int64,1,1},CuDeviceArray{Int64,1,1},CartesianIndice...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\compiler\execution.jl:162; call(::CUDA.HostKernel{CUDA.partial_scan,Tuple{typeof(Base.add_sum),CuDeviceArray{Int64,1,1},CuDeviceArray{Int64,1,1},CartesianIndices{1,Tuple{Base.OneTo{Int64}}},CartesianIndices{0,Tuple{}},CartesianIndices{0,Tuple{}},CartesianIndices{2,Tuple{Base.OneTo{Int6...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\compiler\execution.jl:191; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\src\compiler\execution.jl:207; cudacall##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\compiler\execution.jl:211; #cudacall#795
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\cudadrv\execution.jl:137; cudacall##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\cudadrv\execution.jl:137; #cudacall#598
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\lib\cudadrv\execution.jl:79; convert_arguments
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\lib\cudadrv\execution.jl:97; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\lib\cudadrv\execution.jl:138; #599
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\cudadrv\execution.jl:55; launch##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\cudadrv\execution.jl:62; launch(::CuFunction, ::CuDeviceArray{Int64,1,1}, ::CuDeviceArray{Int64,1,1}, ::CartesianIndices{1,Tuple{Base.OneTo{Int64}}}, ::CartesianIndices{2,Tuple{Base.OneTo{Int64},Base.OneTo{Int64}}}, ::Int64; blocks::Tuple{Int64,Int64,Int64}, threads::Int64, coop...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\lib\cudadrv\execution.jl:9; pack_arguments
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\lib\cudadrv\execution.jl:33; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\lib\cudadrv\execution.jl:69; #594
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\utils\call.jl:93; cuLaunchKernel(::CuFunction, ::UInt32, ::UInt32, ::UInt32, ::UInt32, ::UInt32, ::UInt32, ::Int64, ::CuStream, ::Array{Ptr{Nothing},1}, ::Ptr{Nothing})
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\cudadrv\error.jl:102; macro expansion
+  1╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\lib\cudadrv\libcuda.jl:1234; macro expansion
+   ╎    ╎    ╎    ╎  1    c:\Users\ahmad\OneDrive\Documents\GitHub\open-ended-neural-nets\DFA_BP\explorative\script.jl:164; propagate!(::Network, ::Array{Float16,2}, ::Int64, ::Float64, ::Int64)
+   ╎    ╎    ╎    ╎   1    @Base\broadcast.jl:837; materialize
+   ╎    ╎    ╎    ╎    1    @Base\broadcast.jl:862; copy
+   ╎    ╎    ╎    ╎     1    @CUDA\src\broadcast.jl:11; similar
+   ╎    ╎    ╎    ╎    ╎ 1    @Base\abstractarray.jl:674; similar
+   ╎    ╎    ╎    ╎    ╎  1    @Base\abstractarray.jl:675; similar
+   ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\array.jl:76; CuArray
+   ╎    ╎    ╎    ╎    ╎    1    @CUDA\src\array.jl:20; CuArray{Bool,1}(::UndefInitializer, ::Tuple{Int64})
+   ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\pool.jl:309; alloc
+  1╎    ╎    ╎    ╎    ╎    ╎ 1    @Base\error.jl:112; backtrace()
+   ╎    ╎    ╎    ╎  6    c:\Users\ahmad\OneDrive\Documents\GitHub\open-ended-neural-nets\DFA_BP\explorative\script.jl:165; propagate!(::Network, ::Array{Float16,2}, ::Int64, ::Float64, ::Int64)
+   ╎    ╎    ╎    ╎   4    @CUDA\src\indexing.jl:81; findall
+   ╎    ╎    ╎    ╎    4    @CUDA\src\indexing.jl:49; findall(::CuArray{Bool,1})
+   ╎    ╎    ╎    ╎     4    @Base\accumulate.jl:150; cumsum
+   ╎    ╎    ╎    ╎    ╎ 4    @Base\accumulate.jl:112; cumsum##kw
+   ╎    ╎    ╎    ╎    ╎  4    @Base\accumulate.jl:113; #cumsum#659
+   ╎    ╎    ╎    ╎    ╎   4    @Base\accumulate.jl:51; cumsum!##kw
+   ╎    ╎    ╎    ╎    ╎    4    @Base\accumulate.jl:51; #cumsum!#658
+   ╎    ╎    ╎    ╎    ╎     4    @Base\accumulate.jl:61; _cumsum!
+   ╎    ╎    ╎    ╎    ╎    ╎ 4    @Base\accumulate.jl:357; accumulate!
+   ╎    ╎    ╎    ╎    ╎    ╎  4    @Base\accumulate.jl:359; #accumulate!#666
+   ╎    ╎    ╎    ╎    ╎    ╎   4    @CUDA\src\accumulate.jl:196; _accumulate!
+   ╎    ╎    ╎    ╎    ╎    ╎    4    @CUDA\src\accumulate.jl:131; scan!##kw
+   ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\accumulate.jl:170; scan!(::Function, ::CuArray{Int64,1}, ::CuArray{Bool,1}; dims::Int64, init::Nothing, neutral::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\compiler\execution.jl:102; macro expansion
+  1╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @Base\boot.jl:333; kwfunc(::Any)
+   ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\accumulate.jl:174; scan!(::Function, ::CuArray{Int64,1}, ::CuArray{Bool,1}; dims::Int64, init::Nothing, neutral::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\array.jl:353; fill
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\src\array.jl:77; CuArray
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\array.jl:76; CuArray
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\src\array.jl:20; CuArray{Int64,1}(::UndefInitializer, ::Tuple{Int64})
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\pool.jl:309; alloc
+  1╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @Base\error.jl:112; backtrace()
+   ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\accumulate.jl:175; scan!(::Function, ::CuArray{Int64,1}, ::CuArray{Bool,1}; dims::Int64, init::Nothing, neutral::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @GPUArrays\src\host\abstractarray.jl:97; copyto!
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @GPUArrays\src\host\abstractarray.jl:119; copyto!(::CuArray{Int64,1}, ::Int64, ::SubArray{Int64,1,CuArray{Int64,1},Tuple{StepRange{Int64,Int64}},true}, ::Int64, ::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @GPUArrays\src\device\execution.jl:46; gpu_call##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @GPUArrays\src\device\execution.jl:63; gpu_call(::typeof(GPUArrays.linear_copy_kernel!), ::CuArray{Int64,1}, ::Int64, ::SubArray{Int64,1,CuArray{Int64,1},Tuple{StepRange{Int64,Int64}},true}, ::Int64, ::Int64; target::CuArray{Int64,1}, total_threads::Int64, threads::Nothing, blocks::Nothing, name::Nothing)
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\gpuarrays.jl:30; (::GPUArrays.var"#gpu_call##kw")(::NamedTuple{(:name,),Tuple{Nothing}}, ::typeof(gpu_call), ::CUDA.CuArrayBackend, ::typeof(GPUArrays.linear_copy_kernel!), ::Tuple{CuArray{Int64,1},Int64,SubArray{Int64,1,CuArray{Int64,1},Tuple{StepRange{Int64,Int64}},true},Int64,...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\gpuarrays.jl:30; #gpu_call#858
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\src\compiler\execution.jl:102; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\compiler\execution.jl:345; Any##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\src\compiler\execution.jl:345; #_#801
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\compiler\execution.jl:162; call##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\compiler\execution.jl:162; #call#779
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\src\compiler\execution.jl:191; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\compiler\execution.jl:207; cudacall##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\src\compiler\execution.jl:211; #cudacall#795
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\cudadrv\execution.jl:137; cudacall##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\lib\cudadrv\execution.jl:137; #cudacall#598
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\lib\cudadrv\execution.jl:79; convert_arguments
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\lib\cudadrv\execution.jl:97; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\cudadrv\execution.jl:138; #599
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\cudadrv\execution.jl:55; launch##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\lib\cudadrv\execution.jl:62; launch(::CuFunction, ::CuDeviceArray{Int64,1,1}, ::Int64, ::SubArray{Int64,1,CuDeviceArray{Int64,1,1},Tuple{StepRange{Int64,Int64}},true}, ::Int64, ::Int64; blocks::Int64, threads::Int64, cooperative::Bool, shmem::Int64, stream::CuStream)
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\lib\cudadrv\execution.jl:9; pack_arguments
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\lib\cudadrv\execution.jl:33; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\cudadrv\execution.jl:69; #594
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\utils\call.jl:93; cuLaunchKernel(::CuFunction, ::UInt32, ::UInt32, ::UInt32, ::UInt32, ::UInt32, ::UInt32, ::Int64, ::CuStream, ::Array{Ptr{Nothing},1}, ::Ptr{Nothing})
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\lib\cudadrv\error.jl:102; macro expansion
+  1╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\lib\cudadrv\libcuda.jl:1234; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\accumulate.jl:184; scan!(::Function, ::CuArray{Int64,1}, ::CuArray{Bool,1}; dims::Int64, init::Nothing, neutral::Int64)
+  1╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\compiler\execution.jl:102; macro expansion
+   ╎    ╎    ╎    ╎   2    @CUDA\src\indexing.jl:15; getindex(::CuArray{Float16,1}, ::CuArray{Bool,1})
+   ╎    ╎    ╎    ╎    2    @Base\accumulate.jl:150; cumsum
+   ╎    ╎    ╎    ╎     2    @Base\accumulate.jl:112; cumsum##kw
+   ╎    ╎    ╎    ╎    ╎ 2    @Base\accumulate.jl:113; #cumsum#659
+   ╎    ╎    ╎    ╎    ╎  2    @Base\accumulate.jl:51; cumsum!##kw
+   ╎    ╎    ╎    ╎    ╎   2    @Base\accumulate.jl:51; #cumsum!#658
+   ╎    ╎    ╎    ╎    ╎    2    @Base\accumulate.jl:61; _cumsum!
+   ╎    ╎    ╎    ╎    ╎     2    @Base\accumulate.jl:357; accumulate!
+   ╎    ╎    ╎    ╎    ╎    ╎ 2    @Base\accumulate.jl:359; #accumulate!#666
+   ╎    ╎    ╎    ╎    ╎    ╎  2    @CUDA\src\accumulate.jl:196; _accumulate!
+   ╎    ╎    ╎    ╎    ╎    ╎   2    @CUDA\src\accumulate.jl:131; scan!##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\src\accumulate.jl:170; scan!(::Function, ::CuArray{Int64,1}, ::CuArray{Bool,1}; dims::Int64, init::Nothing, neutral::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\compiler\execution.jl:102; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\compiler\execution.jl:345; (::Core.var"#Any##kw")(::NamedTuple{(:threads, :blocks, :shmem),Tuple{Int64,Tuple{Int64,Int64,Int64},Int64}}, ::CUDA.HostKernel{CUDA.partial_scan,Tuple{typeof(Base.add_sum),CuDeviceArray{Int64,1,1},CuDeviceArray{Bool,1,1},CartesianIndices{1,Tuple{Base.OneTo{Int64}}...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\src\compiler\execution.jl:345; (::CUDA.HostKernel{CUDA.partial_scan,Tuple{typeof(Base.add_sum),CuDeviceArray{Int64,1,1},CuDeviceArray{Bool,1,1},CartesianIndices{1,Tuple{Base.OneTo{Int64}}},CartesianIndices{0,Tuple{}},CartesianIndices{0,Tuple{}},CartesianIndices{2,Tuple{Base.OneTo{Int64},Base.On...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\compiler\execution.jl:162; (::CUDA.var"#call##kw")(::NamedTuple{(:threads, :blocks, :shmem),Tuple{Int64,Tuple{Int64,Int64,Int64},Int64}}, ::typeof(CUDA.call), ::CUDA.HostKernel{CUDA.partial_scan,Tuple{typeof(Base.add_sum),CuDeviceArray{Int64,1,1},CuDeviceArray{Bool,1,1},CartesianIndices{1,T...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\src\compiler\execution.jl:162; call(::CUDA.HostKernel{CUDA.partial_scan,Tuple{typeof(Base.add_sum),CuDeviceArray{Int64,1,1},CuDeviceArray{Bool,1,1},CartesianIndices{1,Tuple{Base.OneTo{Int64}}},CartesianIndices{0,Tuple{}},CartesianIndices{0,Tuple{}},CartesianIndices{2,Tuple{Base.OneTo{Int64},Ba...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\compiler\execution.jl:191; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\compiler\execution.jl:207; cudacall##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\src\compiler\execution.jl:211; #cudacall#795
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\lib\cudadrv\execution.jl:137; cudacall##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\cudadrv\execution.jl:137; #cudacall#598
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\cudadrv\execution.jl:79; convert_arguments
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\lib\cudadrv\execution.jl:97; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\lib\cudadrv\execution.jl:138; #599
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\lib\cudadrv\execution.jl:55; launch##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\cudadrv\execution.jl:62; launch(::CuFunction, ::CuDeviceArray{Int64,1,1}, ::CuDeviceArray{Bool,1,1}, ::CartesianIndices{1,Tuple{Base.OneTo{Int64}}}, ::CartesianIndices{2,Tuple{Base.OneTo{Int64},Base.OneTo{Int64}}}, ::Int64; blocks::Tuple{Int64,Int64,Int64}, threads::Int64, cooperati...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\cudadrv\execution.jl:9; pack_arguments
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\lib\cudadrv\execution.jl:32; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @Base\array.jl:130; vect
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @Base\array.jl:678; _array_for
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @Base\abstractarray.jl:674; similar
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @Base\abstractarray.jl:675; similar
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @Base\boot.jl:415; Array
+  1╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @Base\boot.jl:406; Array
+   ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\src\accumulate.jl:184; scan!(::Function, ::CuArray{Int64,1}, ::CuArray{Bool,1}; dims::Int64, init::Nothing, neutral::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\compiler\execution.jl:102; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\compiler\execution.jl:345; (::Core.var"#Any##kw")(::NamedTuple{(:threads, :blocks),Tuple{Int64,Tuple{Int64,Int64,Int64}}}, ::CUDA.HostKernel{CUDA.aggregate_partial_scan,Tuple{typeof(Base.add_sum),CuDeviceArray{Int64,1,1},CuDeviceArray{Int64,1,1},CartesianIndices{1,Tuple{Base.OneTo{Int64}}},C...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\src\compiler\execution.jl:345; (::CUDA.HostKernel{CUDA.aggregate_partial_scan,Tuple{typeof(Base.add_sum),CuDeviceArray{Int64,1,1},CuDeviceArray{Int64,1,1},CartesianIndices{1,Tuple{Base.OneTo{Int64}}},CartesianIndices{0,Tuple{}},CartesianIndices{0,Tuple{}},CartesianIndices{2,Tuple{Base.OneTo{Int...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\compiler\execution.jl:162; (::CUDA.var"#call##kw")(::NamedTuple{(:threads, :blocks),Tuple{Int64,Tuple{Int64,Int64,Int64}}}, ::typeof(CUDA.call), ::CUDA.HostKernel{CUDA.aggregate_partial_scan,Tuple{typeof(Base.add_sum),CuDeviceArray{Int64,1,1},CuDeviceArray{Int64,1,1},CartesianIndices{1,Tupl...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\src\compiler\execution.jl:162; call(::CUDA.HostKernel{CUDA.aggregate_partial_scan,Tuple{typeof(Base.add_sum),CuDeviceArray{Int64,1,1},CuDeviceArray{Int64,1,1},CartesianIndices{1,Tuple{Base.OneTo{Int64}}},CartesianIndices{0,Tuple{}},CartesianIndices{0,Tuple{}},CartesianIndices{2,Tuple{Base.OneT...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\compiler\execution.jl:191; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\compiler\execution.jl:207; cudacall##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\src\compiler\execution.jl:211; #cudacall#795
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\lib\cudadrv\execution.jl:137; cudacall##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\cudadrv\execution.jl:137; #cudacall#598
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\cudadrv\execution.jl:79; convert_arguments
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\lib\cudadrv\execution.jl:97; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\lib\cudadrv\execution.jl:138; #599
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\lib\cudadrv\execution.jl:55; launch##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\cudadrv\execution.jl:62; launch(::CuFunction, ::CuDeviceArray{Int64,1,1}, ::CuDeviceArray{Int64,1,1}, ::CartesianIndices{1,Tuple{Base.OneTo{Int64}}}, ::CartesianIndices{2,Tuple{Base.OneTo{Int64},Base.OneTo{Int64}}}; blocks::Tuple{Int64,Int64,Int64}, threads::Int64, cooperative::Bool...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\cudadrv\execution.jl:9; pack_arguments
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\lib\cudadrv\execution.jl:33; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\lib\cudadrv\execution.jl:69; #594
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\lib\utils\call.jl:93; cuLaunchKernel(::CuFunction, ::UInt32, ::UInt32, ::UInt32, ::UInt32, ::UInt32, ::UInt32, ::Int64, ::CuStream, ::Array{Ptr{Nothing},1}, ::Ptr{Nothing})
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\cudadrv\error.jl:102; macro expansion
+  1╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\cudadrv\libcuda.jl:1234; macro expansion
+   ╎    ╎    ╎    ╎  1    c:\Users\ahmad\OneDrive\Documents\GitHub\open-ended-neural-nets\DFA_BP\explorative\script.jl:169; propagate!(::Network, ::Array{Float16,2}, ::Int64, ::Float64, ::Int64)
+   ╎    ╎    ╎    ╎   1    @CUDA\src\indexing.jl:80; findall
+   ╎    ╎    ╎    ╎    1    @GPUArrays\src\host\broadcast.jl:89; map(::Function, ::CuArray{Bool,1})
+   ╎    ╎    ╎    ╎     1    @Base\broadcast.jl:1257; broadcasted
+  1╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\broadcast.jl:0; broadcasted(::CUDA.CuArrayStyle{1}, ::Function, ::CuArray{Bool,1})
+   ╎    ╎    ╎    ╎  436  c:\Users\ahmad\OneDrive\Documents\GitHub\open-ended-neural-nets\DFA_BP\explorative\script.jl:176; propagate!(::Network, ::Array{Float16,2}, ::Int64, ::Float64, ::Int64)
+   ╎    ╎    ╎    ╎   435  @Base\broadcast.jl:1160; dotview
+   ╎    ╎    ╎    ╎    435  @Base\views.jl:133; maybeview(::CuArray{Int64,1}, ::CuArray{Int64,1})
+   ╎    ╎    ╎    ╎     435  @CUDA\src\array.jl:395; view
+   ╎    ╎    ╎    ╎    ╎ 435  @Base\tuple.jl:157; map
+   ╎    ╎    ╎    ╎    ╎  435  @CUDA\src\array.jl:395; #853
+   ╎    ╎    ╎    ╎    ╎   435  @Adapt\src\Adapt.jl:40; adapt
+   ╎    ╎    ╎    ╎    ╎    435  @Adapt\src\Adapt.jl:42; adapt_structure
+   ╎    ╎    ╎    ╎    ╎     435  @CUDA\src\array.jl:243; adapt_storage
+   ╎    ╎    ╎    ╎    ╎    ╎ 435  @Base\array.jl:554; convert
+   ╎    ╎    ╎    ╎    ╎    ╎  435  @Base\boot.jl:430; Array
+   ╎    ╎    ╎    ╎    ╎    ╎   435  @Base\array.jl:562; Array
+   ╎    ╎    ╎    ╎    ╎    ╎    435  @Base\abstractarray.jl:946; copyto_axcheck!
+   ╎    ╎    ╎    ╎    ╎    ╎     435  @CUDA\src\array.jl:272; copyto!
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎ 435  @CUDA\src\array.jl:268; copyto!(::Array{Int64,1}, ::Int64, ::CuArray{Int64,1}, ::Int64, ::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎  435  @CUDA\src\array.jl:299; unsafe_copyto!
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎   435  @CUDA\lib\cudadrv\memory.jl:388; unsafe_copyto!
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    435  @CUDA\lib\cudadrv\memory.jl:395; #unsafe_copyto!#6
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎     435  @CUDA\lib\utils\call.jl:93; cuMemcpyDtoH_v2(::Ptr{Int64}, ::CuPtr{Int64}, ::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 435  @CUDA\lib\cudadrv\error.jl:102; macro expansion
+435╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  435  @CUDA\lib\cudadrv\libcuda.jl:506; macro expansion
+   ╎    ╎    ╎    ╎   1    @GPUArrays\src\host\indexing.jl:125; getindex(::CuArray{Int64,1}, ::CuArray{Int64,1})
+   ╎    ╎    ╎    ╎    1    @GPUArrays\src\host\indexing.jl:135; _getindex(::CuArray{Int64,1}, ::CuArray{Int64,1})
+   ╎    ╎    ╎    ╎     1    @GPUArrays\src\device\execution.jl:46; gpu_call(::typeof(GPUArrays.getindex_kernel), ::CuArray{Int64,1}, ::CuArray{Int64,1}, ::Tuple{Int64}, ::CuArray{Int64,1})
+   ╎    ╎    ╎    ╎    ╎ 1    @GPUArrays\src\device\execution.jl:63; gpu_call(::typeof(GPUArrays.getindex_kernel), ::CuArray{Int64,1}, ::CuArray{Int64,1}, ::Tuple{Int64}, ::CuArray{Int64,1}; target::CuArray{Int64,1}, total_threads::Nothing, threads::Nothing, blocks::Nothing, name::Nothing)
+   ╎    ╎    ╎    ╎    ╎  1    @CUDA\src\gpuarrays.jl:30; gpu_call##kw
+   ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\gpuarrays.jl:30; #gpu_call#858
+   ╎    ╎    ╎    ╎    ╎    1    @CUDA\src\compiler\execution.jl:102; macro expansion
+   ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\compiler\execution.jl:345; Any##kw
+   ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\compiler\execution.jl:345; #_#801
+   ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\src\compiler\execution.jl:162; call##kw
+   ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\compiler\execution.jl:162; #call#779
+   ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\src\compiler\execution.jl:191; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\compiler\execution.jl:207; cudacall##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\compiler\execution.jl:211; #cudacall#795
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\lib\cudadrv\execution.jl:137; cudacall##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\lib\cudadrv\execution.jl:137; #cudacall#598
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\cudadrv\execution.jl:79; convert_arguments
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\cudadrv\execution.jl:97; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\lib\cudadrv\execution.jl:138; #599
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\lib\cudadrv\execution.jl:55; launch##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\lib\cudadrv\execution.jl:62; launch(::CuFunction, ::CuDeviceArray{Int64,1,1}, ::CuDeviceArray{Int64,1,1}, ::Tuple{Int64}, ::CuDeviceArray{Int64,1,1}; blocks::Int64, threads::Int64, cooperative::Bool, shmem::Int64, stream::CuStream)
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\cudadrv\execution.jl:9; pack_arguments
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\cudadrv\execution.jl:33; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\lib\cudadrv\execution.jl:69; #594
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\lib\utils\call.jl:93; cuLaunchKernel(::CuFunction, ::UInt32, ::UInt32, ::UInt32, ::UInt32, ::UInt32, ::UInt32, ::Int64, ::CuStream, ::Array{Ptr{Nothing},1}, ::Ptr{Nothing})
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\lib\cudadrv\error.jl:102; macro expansion
+  1╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\cudadrv\libcuda.jl:1234; macro expansion
+   ╎    ╎    ╎    ╎  130  c:\Users\ahmad\OneDrive\Documents\GitHub\open-ended-neural-nets\DFA_BP\explorative\script.jl:190; propagate!(::Network, ::Array{Float16,2}, ::Int64, ::Float64, ::Int64)
+   ╎    ╎    ╎    ╎   130  @CUDA\src\indexing.jl:81; findall
+   ╎    ╎    ╎    ╎    1    @CUDA\src\indexing.jl:49; findall(::CuArray{Bool,1})
+   ╎    ╎    ╎    ╎     1    @Base\accumulate.jl:150; cumsum
+   ╎    ╎    ╎    ╎    ╎ 1    @Base\accumulate.jl:112; cumsum##kw
+   ╎    ╎    ╎    ╎    ╎  1    @Base\accumulate.jl:113; #cumsum#659
+   ╎    ╎    ╎    ╎    ╎   1    @Base\accumulate.jl:51; cumsum!##kw
+   ╎    ╎    ╎    ╎    ╎    1    @Base\accumulate.jl:51; #cumsum!#658
+   ╎    ╎    ╎    ╎    ╎     1    @Base\accumulate.jl:61; _cumsum!
+   ╎    ╎    ╎    ╎    ╎    ╎ 1    @Base\accumulate.jl:357; accumulate!
+   ╎    ╎    ╎    ╎    ╎    ╎  1    @Base\accumulate.jl:359; #accumulate!#666
+   ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\accumulate.jl:196; _accumulate!
+   ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\src\accumulate.jl:131; scan!##kw
+   ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\accumulate.jl:184; scan!(::Function, ::CuArray{Int64,1}, ::CuArray{Bool,1}; dims::Int64, init::Nothing, neutral::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\compiler\execution.jl:102; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\src\compiler\execution.jl:345; (::Core.var"#Any##kw")(::NamedTuple{(:threads, :blocks),Tuple{Int64,Tuple{Int64,Int64,Int64}}}, ::CUDA.HostKernel{CUDA.aggregate_partial_scan,Tuple{typeof(Base.add_sum),CuDeviceArray{Int64,1,1},CuDeviceArray{Int64,1,1},CartesianIndices{1,Tuple{Base.OneTo{Int64}}},...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\compiler\execution.jl:345; (::CUDA.HostKernel{CUDA.aggregate_partial_scan,Tuple{typeof(Base.add_sum),CuDeviceArray{Int64,1,1},CuDeviceArray{Int64,1,1},CartesianIndices{1,Tuple{Base.OneTo{Int64}}},CartesianIndices{0,Tuple{}},CartesianIndices{0,Tuple{}},CartesianIndices{2,Tuple{Base.OneTo{Int...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\src\compiler\execution.jl:162; (::CUDA.var"#call##kw")(::NamedTuple{(:threads, :blocks),Tuple{Int64,Tuple{Int64,Int64,Int64}}}, ::typeof(CUDA.call), ::CUDA.HostKernel{CUDA.aggregate_partial_scan,Tuple{typeof(Base.add_sum),CuDeviceArray{Int64,1,1},CuDeviceArray{Int64,1,1},CartesianIndices{1,Tup...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\compiler\execution.jl:162; call(::CUDA.HostKernel{CUDA.aggregate_partial_scan,Tuple{typeof(Base.add_sum),CuDeviceArray{Int64,1,1},CuDeviceArray{Int64,1,1},CartesianIndices{1,Tuple{Base.OneTo{Int64}}},CartesianIndices{0,Tuple{}},CartesianIndices{0,Tuple{}},CartesianIndices{2,Tuple{Base.One...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\compiler\execution.jl:191; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\src\compiler\execution.jl:207; cudacall##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\compiler\execution.jl:211; #cudacall#795
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\cudadrv\execution.jl:137; cudacall##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\cudadrv\execution.jl:137; #cudacall#598
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\lib\cudadrv\execution.jl:79; convert_arguments
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\lib\cudadrv\execution.jl:97; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\lib\cudadrv\execution.jl:138; #599
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\cudadrv\execution.jl:55; launch##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\cudadrv\execution.jl:62; launch(::CuFunction, ::CuDeviceArray{Int64,1,1}, ::CuDeviceArray{Int64,1,1}, ::CartesianIndices{1,Tuple{Base.OneTo{Int64}}}, ::CartesianIndices{2,Tuple{Base.OneTo{Int64},Base.OneTo{Int64}}}; blocks::Tuple{Int64,Int64,Int64}, threads::Int64, cooperative::Boo...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\lib\cudadrv\execution.jl:9; pack_arguments
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\lib\cudadrv\execution.jl:33; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\lib\cudadrv\execution.jl:69; #594
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\utils\call.jl:93; cuLaunchKernel(::CuFunction, ::UInt32, ::UInt32, ::UInt32, ::UInt32, ::UInt32, ::UInt32, ::Int64, ::CuStream, ::Array{Ptr{Nothing},1}, ::Ptr{Nothing})
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\cudadrv\error.jl:102; macro expansion
+  1╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\lib\cudadrv\libcuda.jl:1234; macro expansion
+   ╎    ╎    ╎    ╎    129  @CUDA\src\indexing.jl:51; findall(::CuArray{Bool,1})
+   ╎    ╎    ╎    ╎     129  @GPUArrays\src\host\indexing.jl:64; macro expansion
+   ╎    ╎    ╎    ╎    ╎ 129  @GPUArrays\src\host\indexing.jl:99; getindex
+   ╎    ╎    ╎    ╎    ╎  129  @CUDA\src\array.jl:268; copyto!(::Array{Int64,1}, ::Int64, ::CuArray{Int64,1}, ::Int64, ::Int64)
+   ╎    ╎    ╎    ╎    ╎   129  @CUDA\src\array.jl:299; unsafe_copyto!
+   ╎    ╎    ╎    ╎    ╎    129  @CUDA\lib\cudadrv\memory.jl:388; unsafe_copyto!
+   ╎    ╎    ╎    ╎    ╎     129  @CUDA\lib\cudadrv\memory.jl:395; #unsafe_copyto!#6
+   ╎    ╎    ╎    ╎    ╎    ╎ 129  @CUDA\lib\utils\call.jl:93; cuMemcpyDtoH_v2(::Ptr{Int64}, ::CuPtr{Int64}, ::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎  129  @CUDA\lib\cudadrv\error.jl:102; macro expansion
+129╎    ╎    ╎    ╎    ╎    ╎   129  @CUDA\lib\cudadrv\libcuda.jl:506; macro expansion
+   ╎    ╎    ╎    ╎  1    c:\Users\ahmad\OneDrive\Documents\GitHub\open-ended-neural-nets\DFA_BP\explorative\script.jl:192; propagate!(::Network, ::Array{Float16,2}, ::Int64, ::Float64, ::Int64)
+   ╎    ╎    ╎    ╎   1    @CUDA\lib\cudnn\nnlib.jl:265; materialize(::Base.Broadcast.Broadcasted{CUDA.CuArrayStyle{1},Nothing,typeof(CUDA.tanh),Tuple{CuArray{Float32,1}}})
+   ╎    ╎    ╎    ╎    1    @CUDA\lib\cudnn\nnlib.jl:239; #590
+   ╎    ╎    ╎    ╎     1    @CUDA\lib\cudnn\activation.jl:27; cudnnActivationForward##kw
+   ╎    ╎    ╎    ╎    ╎ 1    @CUDA\lib\cudnn\activation.jl:27; cudnnActivationForward(::CuArray{Float32,4}, ::CuArray{Float32,4}; mode::CUDA.CUDNN.cudnnActivationMode_t, coeff::Bool, reluNanOpt::CUDA.CUDNN.cudnnNanPropagation_t, alpha::Bool, beta::Bool)
+   ╎    ╎    ╎    ╎    ╎  1    @CUDA\lib\utils\call.jl:93; cudnnActivationForward(::Ptr{Nothing}, ::CUDA.CUDNN.ActivationDesc, ::Base.RefValue{Float32}, ::CUDA.CUDNN.TensorDesc, ::CuArray{Float32,4}, ::Base.RefValue{Float32}, ::CUDA.CUDNN.TensorDesc, ::CuArray{Float32,4})
+   ╎    ╎    ╎    ╎    ╎   1    @CUDA\lib\cudnn\error.jl:28; macro expansion
+   ╎    ╎    ╎    ╎    ╎    1    @CUDA\src\pool.jl:430; macro expansion
+  1╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\cudnn\libcudnn.jl:943; macro expansion
+   ╎    ╎    ╎    ╎  1    c:\Users\ahmad\OneDrive\Documents\GitHub\open-ended-neural-nets\DFA_BP\explorative\script.jl:201; propagate!(::Network, ::Array{Float16,2}, ::Int64, ::Float64, ::Int64)
+   ╎    ╎    ╎    ╎   1    @Base\boot.jl:430; Array
+   ╎    ╎    ╎    ╎    1    @Base\array.jl:562; Array
+   ╎    ╎    ╎    ╎     1    @Base\abstractarray.jl:946; copyto_axcheck!
+   ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\array.jl:272; copyto!
+   ╎    ╎    ╎    ╎    ╎  1    @CUDA\src\array.jl:268; copyto!(::Array{Bool,1}, ::Int64, ::CuArray{Bool,1}, ::Int64, ::Int64)
+   ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\array.jl:299; unsafe_copyto!
+   ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\cudadrv\memory.jl:388; unsafe_copyto!
+   ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\cudadrv\memory.jl:395; #unsafe_copyto!#6
+   ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\lib\utils\call.jl:93; cuMemcpyDtoH_v2(::Ptr{Bool}, ::CuPtr{Bool}, ::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\lib\cudadrv\error.jl:102; macro expansion
+  1╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\lib\cudadrv\libcuda.jl:506; macro expansion
+   ╎    ╎    ╎    ╎  380  c:\Users\ahmad\OneDrive\Documents\GitHub\open-ended-neural-nets\DFA_BP\explorative\script.jl:210; propagate!(::Network, ::Array{Float16,2}, ::Int64, ::Float64, ::Int64)
+   ╎    ╎    ╎    ╎   380  @CUDA\src\indexing.jl:81; findall(::Function, ::CuArray{Bool,2})
+   ╎    ╎    ╎    ╎    2    @CUDA\src\indexing.jl:49; findall(::CuArray{Bool,2})
+   ╎    ╎    ╎    ╎     2    @Base\accumulate.jl:150; cumsum
+   ╎    ╎    ╎    ╎    ╎ 2    @Base\accumulate.jl:112; cumsum##kw
+   ╎    ╎    ╎    ╎    ╎  2    @Base\accumulate.jl:113; #cumsum#659
+   ╎    ╎    ╎    ╎    ╎   2    @Base\accumulate.jl:51; cumsum!##kw
+   ╎    ╎    ╎    ╎    ╎    2    @Base\accumulate.jl:51; #cumsum!#658
+   ╎    ╎    ╎    ╎    ╎     2    @Base\accumulate.jl:61; _cumsum!
+   ╎    ╎    ╎    ╎    ╎    ╎ 2    @Base\accumulate.jl:357; accumulate!
+   ╎    ╎    ╎    ╎    ╎    ╎  2    @Base\accumulate.jl:359; #accumulate!#666
+   ╎    ╎    ╎    ╎    ╎    ╎   2    @CUDA\src\accumulate.jl:196; _accumulate!
+   ╎    ╎    ╎    ╎    ╎    ╎    2    @CUDA\src\accumulate.jl:131; scan!##kw
+   ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\accumulate.jl:178; scan!(::Function, ::CuArray{Int64,1}, ::CuArray{Bool,1}; dims::Int64, init::Nothing, neutral::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @Base\accumulate.jl:357; (::Base.var"#accumulate!##kw")(::NamedTuple{(:dims,),Tuple{Int64}}, ::typeof(accumulate!), ::Function, ::CuArray{Int64,1}, ::CuArray{Int64,1})
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @Base\accumulate.jl:359; #accumulate!#666
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\accumulate.jl:199; _accumulate!
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\src\accumulate.jl:131; (::CUDA.var"#scan!##kw")(::NamedTuple{(:dims,),Tuple{Int64}}, ::typeof(CUDA.scan!), ::Function, ::CuArray{Int64,1}, ::CuArray{Int64,1})
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\accumulate.jl:184; scan!(::Function, ::CuArray{Int64,1}, ::CuArray{Int64,1}; dims::Int64, init::Nothing, neutral::Int64)
+  1╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\compiler\execution.jl:98; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\accumulate.jl:184; scan!(::Function, ::CuArray{Int64,1}, ::CuArray{Bool,1}; dims::Int64, init::Nothing, neutral::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\compiler\execution.jl:102; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\src\compiler\execution.jl:345; (::Core.var"#Any##kw")(::NamedTuple{(:threads, :blocks),Tuple{Int64,Tuple{Int64,Int64,Int64}}}, ::CUDA.HostKernel{CUDA.aggregate_partial_scan,Tuple{typeof(Base.add_sum),CuDeviceArray{Int64,1,1},CuDeviceArray{Int64,1,1},CartesianIndices{1,Tuple{Base.OneTo{Int64}}},...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\compiler\execution.jl:345; (::CUDA.HostKernel{CUDA.aggregate_partial_scan,Tuple{typeof(Base.add_sum),CuDeviceArray{Int64,1,1},CuDeviceArray{Int64,1,1},CartesianIndices{1,Tuple{Base.OneTo{Int64}}},CartesianIndices{0,Tuple{}},CartesianIndices{0,Tuple{}},CartesianIndices{2,Tuple{Base.OneTo{Int...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\src\compiler\execution.jl:162; (::CUDA.var"#call##kw")(::NamedTuple{(:threads, :blocks),Tuple{Int64,Tuple{Int64,Int64,Int64}}}, ::typeof(CUDA.call), ::CUDA.HostKernel{CUDA.aggregate_partial_scan,Tuple{typeof(Base.add_sum),CuDeviceArray{Int64,1,1},CuDeviceArray{Int64,1,1},CartesianIndices{1,Tup...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\compiler\execution.jl:162; call(::CUDA.HostKernel{CUDA.aggregate_partial_scan,Tuple{typeof(Base.add_sum),CuDeviceArray{Int64,1,1},CuDeviceArray{Int64,1,1},CartesianIndices{1,Tuple{Base.OneTo{Int64}}},CartesianIndices{0,Tuple{}},CartesianIndices{0,Tuple{}},CartesianIndices{2,Tuple{Base.One...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\compiler\execution.jl:191; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\src\compiler\execution.jl:207; cudacall##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\compiler\execution.jl:211; #cudacall#795
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\cudadrv\execution.jl:137; cudacall##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\cudadrv\execution.jl:137; #cudacall#598
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\lib\cudadrv\execution.jl:79; convert_arguments
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\lib\cudadrv\execution.jl:97; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\lib\cudadrv\execution.jl:138; #599
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\cudadrv\execution.jl:55; launch##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\cudadrv\execution.jl:62; launch(::CuFunction, ::CuDeviceArray{Int64,1,1}, ::CuDeviceArray{Int64,1,1}, ::CartesianIndices{1,Tuple{Base.OneTo{Int64}}}, ::CartesianIndices{2,Tuple{Base.OneTo{Int64},Base.OneTo{Int64}}}; blocks::Tuple{Int64,Int64,Int64}, threads::Int64, cooperative::Boo...
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\lib\cudadrv\execution.jl:9; pack_arguments
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\lib\cudadrv\execution.jl:33; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\lib\cudadrv\execution.jl:69; #594
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\utils\call.jl:93; cuLaunchKernel(::CuFunction, ::UInt32, ::UInt32, ::UInt32, ::UInt32, ::UInt32, ::UInt32, ::Int64, ::CuStream, ::Array{Ptr{Nothing},1}, ::Ptr{Nothing})
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\cudadrv\error.jl:102; macro expansion
+  1╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\lib\cudadrv\libcuda.jl:1234; macro expansion
+   ╎    ╎    ╎    ╎    377  @CUDA\src\indexing.jl:51; findall(::CuArray{Bool,2})
+   ╎    ╎    ╎    ╎     377  @GPUArrays\src\host\indexing.jl:64; macro expansion
+   ╎    ╎    ╎    ╎    ╎ 377  @GPUArrays\src\host\indexing.jl:99; getindex
+   ╎    ╎    ╎    ╎    ╎  377  @CUDA\src\array.jl:268; copyto!(::Array{Int64,1}, ::Int64, ::CuArray{Int64,1}, ::Int64, ::Int64)
+   ╎    ╎    ╎    ╎    ╎   377  @CUDA\src\array.jl:299; unsafe_copyto!
+   ╎    ╎    ╎    ╎    ╎    377  @CUDA\lib\cudadrv\memory.jl:388; unsafe_copyto!
+   ╎    ╎    ╎    ╎    ╎     377  @CUDA\lib\cudadrv\memory.jl:395; #unsafe_copyto!#6
+   ╎    ╎    ╎    ╎    ╎    ╎ 377  @CUDA\lib\utils\call.jl:93; cuMemcpyDtoH_v2(::Ptr{Int64}, ::CuPtr{Int64}, ::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎  377  @CUDA\lib\cudadrv\error.jl:102; macro expansion
+377╎    ╎    ╎    ╎    ╎    ╎   377  @CUDA\lib\cudadrv\libcuda.jl:506; macro expansion
+   ╎    ╎    ╎    ╎    1    @CUDA\src\indexing.jl:71; findall(::CuArray{Bool,2})
+   ╎    ╎    ╎    ╎     1    @CUDA\src\compiler\execution.jl:345; Any##kw
+   ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\compiler\execution.jl:345; #_#801
+   ╎    ╎    ╎    ╎    ╎  1    @CUDA\src\compiler\execution.jl:162; call##kw
+   ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\compiler\execution.jl:162; #call#779
+   ╎    ╎    ╎    ╎    ╎    1    @CUDA\src\compiler\execution.jl:191; macro expansion
+   ╎    ╎    ╎    ╎    ╎     1    @CUDA\src\compiler\execution.jl:207; cudacall##kw
+   ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\src\compiler\execution.jl:211; #cudacall#795
+   ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\lib\cudadrv\execution.jl:137; cudacall##kw
+   ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\lib\cudadrv\execution.jl:137; #cudacall#598
+   ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\cudadrv\execution.jl:79; convert_arguments
+   ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\cudadrv\execution.jl:97; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\lib\cudadrv\execution.jl:138; #599
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\lib\cudadrv\execution.jl:55; launch##kw
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\lib\cudadrv\execution.jl:62; launch(::CuFunction, ::CuDeviceArray{CartesianIndex{2},1,1}, ::CuDeviceArray{Bool,2,1}, ::CuDeviceArray{Int64,1,1}; blocks::Int64, threads::Int64, cooperative::Bool, shmem::Int64, stream::CuStream)
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\cudadrv\execution.jl:9; pack_arguments
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\cudadrv\execution.jl:33; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\lib\cudadrv\execution.jl:69; #594
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\lib\utils\call.jl:93; cuLaunchKernel(::CuFunction, ::UInt32, ::UInt32, ::UInt32, ::UInt32, ::UInt32, ::UInt32, ::Int64, ::CuStream, ::Array{Ptr{Nothing},1}, ::Ptr{Nothing})
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\lib\cudadrv\error.jl:102; macro expansion
+  1╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\cudadrv\libcuda.jl:1234; macro expansion
+   ╎    ╎    ╎    ╎  30   c:\Users\ahmad\OneDrive\Documents\GitHub\open-ended-neural-nets\DFA_BP\explorative\script.jl:211; propagate!(::Network, ::Array{Float16,2}, ::Int64, ::Float64, ::Int64)
+   ╎    ╎    ╎    ╎   30   @Base\arraymath.jl:39; +(::CuArray{Float32,2}, ::LinearAlgebra.Transpose{Float64,CuArray{Float64,2}})
+   ╎    ╎    ╎    ╎    30   @Base\broadcast.jl:826; broadcast_preserving_zero_d
+   ╎    ╎    ╎    ╎     30   @Base\broadcast.jl:837; materialize
+   ╎    ╎    ╎    ╎    ╎ 30   @Base\broadcast.jl:862; copy
+   ╎    ╎    ╎    ╎    ╎  30   @CUDA\src\broadcast.jl:11; similar
+   ╎    ╎    ╎    ╎    ╎   30   @Base\abstractarray.jl:674; similar
+   ╎    ╎    ╎    ╎    ╎    30   @Base\abstractarray.jl:675; similar
+   ╎    ╎    ╎    ╎    ╎     30   @CUDA\src\array.jl:76; CuArray
+   ╎    ╎    ╎    ╎    ╎    ╎ 30   @CUDA\src\array.jl:20; CuArray{Float64,2}(::UndefInitializer, ::Tuple{Int64,Int64})
+   ╎    ╎    ╎    ╎    ╎    ╎  30   @CUDA\src\pool.jl:295; alloc
+   ╎    ╎    ╎    ╎    ╎    ╎   30   @Base\timing.jl:233; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    30   @CUDA\src\pool.jl:296; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎     30   @TimerOutputs\src\TimerOutput.jl:206; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎ 30   @CUDA\src\pool\binned.jl:148; pool_alloc(::CuDevice, ::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎  30   @TimerOutputs\src\TimerOutput.jl:206; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎   30   @CUDA\src\pool\binned.jl:149; macro expansion
+ 29╎    ╎    ╎    ╎    ╎    ╎    ╎    30   @Base\gcutils.jl:79; gc
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎     1    @CUDA\lib\cudnn\tensor.jl:9; unsafe_free!(::CUDA.CUDNN.TensorDesc)
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎ 1    @CUDA\lib\utils\call.jl:93; cudnnDestroyTensorDescriptor(::Ptr{Nothing})
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎  1    @CUDA\lib\cudnn\error.jl:28; macro expansion
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎   1    @CUDA\src\pool.jl:430; macro expansion
+  1╎    ╎    ╎    ╎    ╎    ╎    ╎    ╎    1    @CUDA\lib\cudnn\libcudnn.jl:126; macro expansion
+   ╎    ╎    ╎    ╎  6    c:\Users\ahmad\OneDrive\Documents\GitHub\open-ended-neural-nets\DFA_BP\explorative\script.jl:218; propagate!(::Network, ::Array{Float16,2}, ::Int64, ::Float64, ::Int64)
+   ╎    ╎    ╎    ╎   6    @ProgressBars\src\ProgressBars.jl:177; iterate(::ProgressBar, ::Int64)
+   ╎    ╎    ╎    ╎    1    @ProgressBars\src\ProgressBars.jl:107; display_progress(::ProgressBar)
+   ╎    ╎    ╎    ╎     1    @Base\coreio.jl:3; print(::String)
+   ╎    ╎    ╎    ╎    ╎ 1    @Base\strings\io.jl:185; print(::Base.TTY, ::String)
+   ╎    ╎    ╎    ╎    ╎  1    @Base\strings\io.jl:183; write
+   ╎    ╎    ╎    ╎    ╎   1    @Base\stream.jl:1005; unsafe_write(::Base.TTY, ::Ptr{UInt8}, ::UInt64)
+   ╎    ╎    ╎    ╎    ╎    1    @Base\stream.jl:922; uv_write(::Base.TTY, ::Ptr{UInt8}, ::UInt64)
+  1╎    ╎    ╎    ╎    ╎     1    @Base\stream.jl:965; uv_write_async(::Base.TTY, ::Ptr{UInt8}, ::UInt64)
+   ╎    ╎    ╎    ╎    2    @ProgressBars\src\ProgressBars.jl:142; display_progress(::ProgressBar)
+   ╎    ╎    ╎    ╎     2    @Base\coreio.jl:3; print(::String)
+   ╎    ╎    ╎    ╎    ╎ 2    @Base\strings\io.jl:185; print(::Base.TTY, ::String)
+   ╎    ╎    ╎    ╎    ╎  2    @Base\strings\io.jl:183; write
+   ╎    ╎    ╎    ╎    ╎   2    @Base\stream.jl:1005; unsafe_write(::Base.TTY, ::Ptr{UInt8}, ::UInt64)
+   ╎    ╎    ╎    ╎    ╎    2    @Base\stream.jl:922; uv_write(::Base.TTY, ::Ptr{UInt8}, ::UInt64)
+  2╎    ╎    ╎    ╎    ╎     2    @Base\stream.jl:965; uv_write_async(::Base.TTY, ::Ptr{UInt8}, ::UInt64)
+  1╎    ╎    ╎    ╎    2    @ProgressBars\src\ProgressBars.jl:143; display_progress(::ProgressBar)
+   ╎    ╎    ╎    ╎     1    @Base\coreio.jl:3; print(::String)
+   ╎    ╎    ╎    ╎    ╎ 1    @Base\strings\io.jl:185; print(::Base.TTY, ::String)
+   ╎    ╎    ╎    ╎    ╎  1    @Base\strings\io.jl:183; write
+   ╎    ╎    ╎    ╎    ╎   1    @Base\stream.jl:1005; unsafe_write(::Base.TTY, ::Ptr{UInt8}, ::UInt64)
+   ╎    ╎    ╎    ╎    ╎    1    @Base\stream.jl:922; uv_write(::Base.TTY, ::Ptr{UInt8}, ::UInt64)
+  1╎    ╎    ╎    ╎    ╎     1    @Base\stream.jl:965; uv_write_async(::Base.TTY, ::Ptr{UInt8}, ::UInt64)
+   ╎    ╎    ╎    ╎    1    @ProgressBars\src\ProgressBars.jl:146; display_progress(::ProgressBar)
+   ╎    ╎    ╎    ╎     1    @Base\coreio.jl:3; print(::Char)
+   ╎    ╎    ╎    ╎    ╎ 1    @Base\char.jl:229; print(::Base.TTY, ::Char)
+   ╎    ╎    ╎    ╎    ╎  1    @Base\io.jl:676; write
+   ╎    ╎    ╎    ╎    ╎   1    @Base\stream.jl:1043; write(::Base.TTY, ::UInt8)
+   ╎    ╎    ╎    ╎    ╎    1    @Base\io.jl:623; write
+   ╎    ╎    ╎    ╎    ╎     1    @Base\io.jl:620; unsafe_write(::Base.TTY, ::Base.RefValue{UInt8}, ::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎ 1    @Base\io.jl:622; unsafe_write
+   ╎    ╎    ╎    ╎    ╎    ╎  1    @Base\stream.jl:1005; unsafe_write(::Base.TTY, ::Ptr{UInt8}, ::UInt64)
+   ╎    ╎    ╎    ╎    ╎    ╎   1    @Base\stream.jl:933; uv_write(::Base.TTY, ::Ptr{UInt8}, ::UInt64)
+   ╎    ╎    ╎    ╎    ╎    ╎    1    @Base\task.jl:712; wait
+  1╎    ╎    ╎    ╎    ╎    ╎     1    @Base\task.jl:704; poptask(::Base.InvasiveLinkedListSynchronized{Task})
+   ╎    ╎    ╎    ╎  33   c:\Users\ahmad\OneDrive\Documents\GitHub\open-ended-neural-nets\DFA_BP\explorative\script.jl:225; propagate!(::Network, ::Array{Float16,2}, ::Int64, ::Float64, ::Int64)
+   ╎    ╎    ╎    ╎   33   @Base\boot.jl:430; Array
+   ╎    ╎    ╎    ╎    33   @Base\array.jl:562; Array
+   ╎    ╎    ╎    ╎     33   @Base\abstractarray.jl:946; copyto_axcheck!
+   ╎    ╎    ╎    ╎    ╎ 33   @CUDA\src\array.jl:272; copyto!
+   ╎    ╎    ╎    ╎    ╎  33   @CUDA\src\array.jl:268; copyto!(::Array{Float16,1}, ::Int64, ::CuArray{Float16,1}, ::Int64, ::Int64)
+   ╎    ╎    ╎    ╎    ╎   33   @CUDA\src\array.jl:299; unsafe_copyto!
+   ╎    ╎    ╎    ╎    ╎    33   @CUDA\lib\cudadrv\memory.jl:388; unsafe_copyto!
+   ╎    ╎    ╎    ╎    ╎     33   @CUDA\lib\cudadrv\memory.jl:395; #unsafe_copyto!#6
+   ╎    ╎    ╎    ╎    ╎    ╎ 33   @CUDA\lib\utils\call.jl:93; cuMemcpyDtoH_v2(::Ptr{Float16}, ::CuPtr{Float16}, ::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎  33   @CUDA\lib\cudadrv\error.jl:102; macro expansion
+ 33╎    ╎    ╎    ╎    ╎    ╎   33   @CUDA\lib\cudadrv\libcuda.jl:506; macro expansion
+   ╎    ╎    ╎    ╎  13   c:\Users\ahmad\OneDrive\Documents\GitHub\open-ended-neural-nets\DFA_BP\explorative\script.jl:226; propagate!(::Network, ::Array{Float16,2}, ::Int64, ::Float64, ::Int64)
+   ╎    ╎    ╎    ╎   13   @StructArrays\src\utils.jl:164; replace_storage(::Type{T} where T, ::StructArray{Synapse,2,NamedTuple{(:w, :δw, :α),Tuple{CuArray{Float32,2},CuArray{Float32,2},CuArray{Bool,2}}},Int64})
+   ╎    ╎    ╎    ╎    13   @Base\namedtuple.jl:187; map(::Function, ::NamedTuple{(:w, :δw, :α),Tuple{CuArray{Float32,2},CuArray{Float32,2},CuArray{Bool,2}}})
+   ╎    ╎    ╎    ╎     13   @Base\tuple.jl:159; map(::StructArrays.var"#63#64"{UnionAll}, ::Tuple{CuArray{Float32,2},CuArray{Float32,2},CuArray{Bool,2}})
+   ╎    ╎    ╎    ╎    ╎ 13   @StructArrays\src\utils.jl:164; #63
+   ╎    ╎    ╎    ╎    ╎  13   @StructArrays\src\utils.jl:131; replace_storage(::Type{T} where T, ::CuArray{Float32,2})
+   ╎    ╎    ╎    ╎    ╎   13   @Base\boot.jl:430; Array(::CuArray{Float32,2})
+   ╎    ╎    ╎    ╎    ╎    13   @Base\array.jl:562; Array
+   ╎    ╎    ╎    ╎    ╎     13   @Base\abstractarray.jl:946; copyto_axcheck!
+   ╎    ╎    ╎    ╎    ╎    ╎ 13   @CUDA\src\array.jl:272; copyto!
+   ╎    ╎    ╎    ╎    ╎    ╎  13   @CUDA\src\array.jl:268; copyto!(::Array{Float32,2}, ::Int64, ::CuArray{Float32,2}, ::Int64, ::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎   13   @CUDA\src\array.jl:299; unsafe_copyto!
+   ╎    ╎    ╎    ╎    ╎    ╎    13   @CUDA\lib\cudadrv\memory.jl:388; unsafe_copyto!
+   ╎    ╎    ╎    ╎    ╎    ╎     13   @CUDA\lib\cudadrv\memory.jl:395; #unsafe_copyto!#6
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎ 13   @CUDA\lib\utils\call.jl:93; cuMemcpyDtoH_v2(::Ptr{Float32}, ::CuPtr{Float32}, ::Int64)
+   ╎    ╎    ╎    ╎    ╎    ╎    ╎  13   @CUDA\lib\cudadrv\error.jl:102; macro expansion
+ 13╎    ╎    ╎    ╎    ╎    ╎    ╎   13   @CUDA\lib\cudadrv\libcuda.jl:506; macro expansion
+Total snapshots: 1490
